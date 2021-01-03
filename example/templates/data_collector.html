@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="POST" action="collect_data/">
+        {% csrf_token %}
+        Название файла: <input type="text" name="name" autocomplete="off" maxlength="20"><br>
+        Информация для записи: <textarea name="data" autocomplete="off" maxlength="1000000"> </textarea> <br>
+        <input type="submit" value="Отправить данные">
+    </form>
+</body>
+</html>
